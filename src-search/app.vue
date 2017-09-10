@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="searchName">
+    <input type="text" v-model.lazy="searchName">
     <div v-if="!repoName">正在加载</div>
     <div v-else>
       most start repo is
@@ -10,15 +10,14 @@
 </template>
 <script>
   export default {
-    data() {
+    data(){
       return {
-        searchName:'',
-        url:'',
-        repoName:''
+        searchName: '',
+        url: '',
+        repoName: ''
       }
     },
      mounted(){
-
       const url = `https://api.github.com/search/repositories?q=${this.searchName}&sort=stars`
      this.$http.get(url)
        .then(
