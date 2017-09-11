@@ -18,9 +18,9 @@
       <div class="col-xs-6">
         <div class="panel">
           <div class="panel-body">
-
+            <keep-alive>
               <router-view msg="atguigu"></router-view>
-
+            </keep-alive>
           </div>
         </div>
       </div>

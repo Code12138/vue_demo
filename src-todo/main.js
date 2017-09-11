@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import app from './app.vue'
+import '../static/base.css'
 
 Vue.config.productionTip = false
 
